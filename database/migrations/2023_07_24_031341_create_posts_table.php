@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('news_content');
-            $table->unsignedBigInteger('author');
+            $table->unsignedBigInteger('user_id');
             $table->softDeletes();
             $table->timestamps();
 
             //foreign key
-            $table->foreign('author')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
