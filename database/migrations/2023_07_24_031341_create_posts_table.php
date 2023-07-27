@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('news_content');
+            $table->text('image')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->softDeletes();
             $table->timestamps();
